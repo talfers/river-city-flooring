@@ -44,7 +44,7 @@ app.post('/contact', function(req, res){
         <p>Email: ${req.body.email}</p>
         <p>Est Size: ${req.body.sqft}sqft</p>
         <p>Project Desc: ${req.body.desc}</p>
-        <p>Please contact them within 48 business hours.</p>
+        <p style='color: red;'>Please contact them within 48 business hours.</p>
         `;
         // create reusable transporter object using the default SMTP transport
         let transporter = nodemailer.createTransport({
