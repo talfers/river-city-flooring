@@ -1,0 +1,86 @@
+<% include partials/html-header %>
+
+<div class="home-container">
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home"><img id='brand' src='/img/nav-white.png'></a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <section id="home">
+        <div id="slideshow-container">
+            <img style="display: block;" class="slide" src="https://images.unsplash.com/photo-1516258432871-b924b9b34d03?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80">
+            <img class="slide" src="https://images.pexels.com/photos/534151/pexels-photo-534151.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+            <img class="slide" src="https://images.pexels.com/photos/1668860/pexels-photo-1668860.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+            <img class="slide" src="https://images.pexels.com/photos/1884236/pexels-photo-1884236.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+            <img class="slide" src="https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+            <button id="prev" onclick="changeIndex(-1)">&#10094;</button>
+            <button id="next" onclick="changeIndex(1)">&#10095;</button>
+        </div>
+        <div class='break'>
+            <p>See Our Full Gallery Here:</p>
+            <a href='gallery' class='button'>View Gallery</a>
+        </div>
+    </section>
+    <section id="about">
+        <h1 style='text-shadow: 2px 2px 4px #000000;'>About Us</h1>
+        <div class='three-block'>
+            <div data-aos="fade-up" data-aos-duration="500" class='block'>
+                <img class='icons' src='/img/tools2.png'>
+                <h1>Preparation</h1>
+                <p>Lorem ipsum dolor sit amet, duo homero constituam id, choro noster repudiandae sit eu, eu per dicit vivendo.</p>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="400" data-aos-delay="200" class='block'>
+                <img class='icons' src='/img/floor.png'>
+                <h1>Flooring</h1>
+                <p>Lorem ipsum dolor sit amet, duo homero constituam id, choro noster repudiandae sit eu, eu per dicit vivendo.</p>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="400" data-aos-delay="400" class='block'>
+                <img class='icons' src='/img/cleaner.png'>
+                <h1>Finishing</h1>
+                <p>Lorem ipsum dolor sit amet, duo homero constituam id, choro noster repudiandae sit eu, eu per dicit vivendo.</p>
+            </div>
+        </div>
+    </section>
+    <section id="projects">
+        <div class='text-block'>
+            <h1>Projects</h1>
+            <p>Lorem ipsum dolor sit amet, duo homero constituam id, choro noster repudiandae sit eu, eu per dicit vivendo.</p>
+            <a href='/projects' class='button'>See More</a>
+        </div>
+    </section>
+    <section id="contact">
+        <div class='text-block'>
+            <h1>Contact</h1>
+            <p>Lorem ipsum dolor sit amet, duo homero constituam id, choro noster repudiandae sit eu, eu per dicit vivendo.</p>
+            <a href='/contact' class='button'>Contact Us</a>
+        </div>
+    </section>
+</div>
+<footer>
+        <div class='foot-left'>
+            <div><i class="far fa-copyright"></i>  Copyright 2019 River City Hardwood Flooring</div>
+            <p>Web Design by alfalfa Technologies</p>
+            <div class='credits'>Icons made by <a href="https://www.freepik.com/">Freepik</a> from <a href="https://www.flaticon.com/">flaticon.com</a> and <a href="https://www.fontawesome.com/">fontawesome.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+            <div class='footer-nav'>
+                <a href='#home'>Home</a>
+                <a href='#about'>About</a>
+                <a href='#projects'>Projects</a>
+                <a href='#contact'>Contact</a>
+            </div>
+        </div>
+        <div class='foot-right'>
+            <p>River City Hardwood Flooring</p>
+            <p>Wichita, Kansas</p>
+            <p>phone: (316) 555-5555</p>
+            <p>email: rivercityhardwood@gmail.com</p>
+            <a href='#'><i class="fab fa-facebook-square"></i>  Facebook</a>
+            <a href='#'><i class="fab fa-instagram"></i>  Instagram</a>
+            <a href='#'><i class="fab fa-twitter-square"></i>  Twitter</a>
+        </div>
+    </footer>
+
+<script src='/lib/slideshow.js'></script>
+<% include partials/footer %>

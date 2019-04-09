@@ -1,0 +1,52 @@
+<% include partials/nav-header %>
+
+<div class='light container'>
+    <div style='background-image: url("https://images.pexels.com/photos/205421/pexels-photo-205421.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");' class='banner'>
+        <div class='banner-head'>
+            <h1>Contact</h1>
+        </div>
+    </div>
+    <div class='input-container'>
+        <div class='form-container'>
+            <h3>Contact Us</h3>
+            <p>Fill out this form to get an estimate</p>
+            <form action='/contact' method='POST'>
+                <div class='name'>
+                    <input style='margin-right: 6px;' name='firstName' type='text' placeholder='First Name'>
+                    <input style='margin-left: 6px;' name='lastName' type='text' placeholder='Last Name'>
+                </div>
+                <input name='email' type='text' placeholder='Email'>
+                <input name='phone' type='text' placeholder='Phone #'>
+                <input name='sqft' type='number' placeholder='Approx sqft'>
+                <input name='desc' type='text' placeholder='Description'>
+                <input type='submit' vaule='Contact Us'>
+            </form>
+        </div>
+    </div>
+    
+    
+</div>
+<footer>
+        <div class='foot-left'>
+            <div><i class="far fa-copyright"></i>  Copyright 2019 River City Hardwood Flooring</div>
+            <p>Web Design by alfalfa Technologies</p>
+            <div class='credits'>Icons made by <a href="https://www.freepik.com/">Freepik</a> from <a href="https://www.flaticon.com/">flaticon.com</a> and <a href="https://www.fontawesome.com/">fontawesome.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+            <div class='footer-nav'>
+                <a href='/'>Home</a>
+                <a href='/about'>About</a>
+                <a href='/projects'>Projects</a>
+                <a href='/contact'>Contact</a>
+            </div>
+        </div>
+        <div class='foot-right'>
+            <p>River City Hardwood Flooring</p>
+            <p>Wichita, Kansas</p>
+            <p>phone: (316) 555-5555</p>
+            <p>email: rivercityhardwood@gmail.com</p>
+            <a href='#'><i class="fab fa-facebook-square"></i>  Facebook</a>
+            <a href='#'><i class="fab fa-instagram"></i>  Instagram</a>
+            <a href='#'><i class="fab fa-twitter-square"></i>  Twitter</a>
+        </div>
+    </footer>
+
+<% include partials/footer %>
