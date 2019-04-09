@@ -59,7 +59,7 @@ app.post('/contact', function(req, res){
         
         // setup email data with unicode symbols
         let mailOptionsCust = {
-            from: '"River City Hardwood" <rivercityhardwoodflooring@gmail.com>', // sender address
+            from: '"River City Hardwood" <no-reply@rivercityhardwood.com>', // sender address
             to: req.body.email, // list of receivers
             subject: "Thank you for your inquiry!", // Subject line
             text: "River City Hardwood Thank You", // plain text body
@@ -68,7 +68,7 @@ app.post('/contact', function(req, res){
         
         // setup email data with unicode symbols
         let mailOptionsCo = {
-            from: '"River City Hardwood" <rivercityhardwoodflooring@gmail.com>', // sender address
+            from: '"River City Hardwood" <no-reply@rivercityhardwood.com>', // sender address
             to: "tayloralfers@gmail.com", // list of receivers
             subject: "You have a new inquiry", // Subject line
             text: "River City Hardwood Inquiry", // plain text body
