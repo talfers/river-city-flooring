@@ -506,6 +506,9 @@ footer .foot-right a {
         width: 92%;
         margin: 16px 4%;
     }
+    .container .grid .project img {
+        opacity: 1;
+    }
     .container .input-container .form-container {
         width: 80%;
     }
