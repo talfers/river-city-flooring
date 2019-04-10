@@ -33,8 +33,8 @@ app.get('/contact', function(req, res){
 app.post('/contact', function(req, res){
     const custOutput = `
         <h3>Thank you for your inquiry, ${req.body.firstName}!</h3>
-        <p>We will be in contact with you within 48 business hours.</p>
-        <p>Just go on over to: <a href=''>River City Flooring</a> to see our work.</p>
+        <p>We will reach out to you within 48 business hours.</p>
+        <p>Just go on over to: <a href='http://www.rivercityhardwood.com'>River City Flooring</a> in the mean time to see our work.</p>
         `;
     const coOutput = `
         <h2>You have a new inquiry!</h2>
