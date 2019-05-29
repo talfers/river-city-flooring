@@ -1,14 +1,18 @@
 const express = require('express');
 const app = express();
-const port = process.env.PORT;
+const port = process.env.PORT || 3000;
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const emailAuth = require('./emailAuth');
+const seedDB = require('./creator');
+const db = require('./models');
 
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
+
+seedDB();
 
 app.get('/', function(req, res){
     res.render('home');
@@ -23,7 +27,13 @@ app.get('/gallery', function(req, res){
 });
 
 app.get('/projects', function(req, res){
-    res.render('projects');
+    db.Project.find({}, function(err, foundProjects) {
+      if(err){
+        console.log(err);
+      } else {
+        res.render('projects', {projects:foundProjects});
+      }
+    })
 });
 
 app.get('/contact', function(req, res){
@@ -56,7 +66,7 @@ app.post('/contact', function(req, res){
               pass: emailAuth.pass // generated ethereal password
             }
         });
-        
+
         // setup email data with unicode symbols
         let mailOptionsCust = {
             from: '"River City Hardwood" <no-reply@rivercityhardwood.com>', // sender address
@@ -65,16 +75,16 @@ app.post('/contact', function(req, res){
             text: "River City Hardwood Thank You", // plain text body
             html: custOutput // html body
         };
-        
+
         // setup email data with unicode symbols
         let mailOptionsCo = {
             from: '"River City Hardwood" <no-reply@rivercityhardwood.com>', // sender address
-            to: "tayloralfers@gmail.com", // list of receivers
+            to: "scistar17@hotmail.com", // list of receivers
             subject: "You have a new inquiry", // Subject line
             text: "River City Hardwood Inquiry", // plain text body
             html: coOutput // html body
         };
-        
+
         // send mail with defined transport object
         transporter.sendMail(mailOptionsCust, function(error, info){
             if(error) {
@@ -87,7 +97,7 @@ app.post('/contact', function(req, res){
           });
           // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
           // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
-        
+
         // send mail with defined transport object
         transporter.sendMail(mailOptionsCo, function(error, info){
             if(error) {

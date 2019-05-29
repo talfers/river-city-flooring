@@ -7,50 +7,22 @@
         </div>
     </div>
     <div class='grid'>
+
+      <% projects.forEach(project => { %>
+
         <a href='#' class='project'>
-            <img src='https://images.pexels.com/photos/2032021/pexels-photo-2032021.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'>
+            <img src='<%= project.img %>'>
             <div class='project-txt'>
-                <h4>Project Name</h4>
-                <p>Project Location, KS</p>
+                <h4><%= project.title %></h4>
+                <p><%= project.locale %></p>
             </div>
         </a>
-        <a href='#' class='project'>
-            <img src='https://images.pexels.com/photos/189333/pexels-photo-189333.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'>
-            <div class='project-txt'>
-                <h4>Project Name</h4>
-                <p>Project Location, KS</p>
-            </div>
-            
-        </a>
-        <a href='/' class='project'>
-            <img src='https://images.pexels.com/photos/271632/pexels-photo-271632.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'>
-            <div class='project-txt'>
-                <h4>Project Name</h4>
-                <p>Project Location, KS</p>
-            </div>
-        </a>
-        <a href='#' class='project'>
-            <img src='https://images.pexels.com/photos/1813669/pexels-photo-1813669.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'>
-            <div class='project-txt'>
-                <h4>Project Name</h4>
-                <p>Project Location, KS</p>
-            </div>
-        </a>
-        <a href='#' class='project'>
-            <img src='https://images.pexels.com/photos/1082357/pexels-photo-1082357.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'>
-            <div class='project-txt'>
-                <h4>Project Name</h4>
-                <p>Project Location, KS</p>
-            </div>
-        </a>
-        <a href='#' class='project'>
-            <img src='https://images.pexels.com/photos/2082087/pexels-photo-2082087.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'>
-            <div class='project-txt'>
-                <h4>Project Name</h4>
-                <p>Project Location, KS</p>
-            </div>
-        </a>
+
+      <% }); %>
+
     </div>
 </div>
+<script type="text/javascript" src='/lib/grid.js'>
 
+</script>
 <% include partials/footer %>
