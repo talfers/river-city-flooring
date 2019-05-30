@@ -587,8 +587,8 @@ footer .foot-right a {
       flex-direction: column;
     }
     .container .grid .project {
-        height: 320px;
-        min-width: 320px;
+        height: 75vh;
+        min-width: 100%;
         max-width: 100%;
         margin: 1rem;
     }
