@@ -585,6 +585,8 @@ footer .foot-right a {
     .container .grid {
       flex-wrap: nowrap;
       flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
     .container .grid .project {
         height: 75vh;
