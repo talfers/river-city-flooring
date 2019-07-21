@@ -1,4 +1,4 @@
-const widths = []
+/*const widths = []
 window.onload = function(){
   const projects = document.querySelectorAll('.project');
 
@@ -7,3 +7,4 @@ window.onload = function(){
   project.style.width = width;
 })
 }
+*/

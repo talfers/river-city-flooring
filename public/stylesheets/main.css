@@ -316,7 +316,6 @@ section#contact {
     min-height: 100vh;
     display: flex;
     flex-direction:column;
-
 }
 
 .container .banner {
@@ -340,26 +339,23 @@ section#contact {
 }
 
 .container .grid {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 60px 60px;
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(270px, 1fr) );
+    margin: 3rem;
 }
 
 .container .grid .project {
     display: flex;
     flex-direction: column;
-    min-width: 320px;
-    max-width: 48%;
     background-color: black;
     color: #f0f0f0;
-    margin: 16px 1%;
-    height: 40vh;
+    height: 240px;
     flex: 1 0 auto;
     position: relative;
-    transition: transform 0.15s ease-in;
     -webkit-box-shadow: 1px 8px 36px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 1px 8px 36px 0px rgba(0,0,0,0.75);
     box-shadow: 1px 8px 36px 0px rgba(0,0,0,0.75);
+    overflow: hidden;
 }
 
 .container .grid .project img {
@@ -367,15 +363,16 @@ section#contact {
     object-fit: cover;
     object-position: bottom;
     opacity: 0.7;
-    transition: opacity 0.2s ease-in;
+    transition: all 0.2s ease-in;
 }
 
 .container .grid .project:hover img {
     opacity: 1;
+    transform: scale(1.05);
 }
 
 .container .grid .project:hover {
-    transform: scale(1.1);
+
 }
 
 .container .grid .project .project-txt {
@@ -451,7 +448,9 @@ section#contact {
 .masonry {
   columns: 6;
   column-gap: 1rem;
-  margin: 100px 1rem 1rem 1rem;
+  -moz-column-fill: auto;
+  column-fill: auto;
+  padding: 100px 1rem 1rem 1rem;
 }
 
 .masonry .brick {
@@ -463,6 +462,8 @@ section#contact {
   display: inline-block;
   transition: transform 0.1s ease;
   cursor: pointer;
+  /*BUG FIX*/
+  will-change: transform;
 }
 
 .masonry .brick:hover {
@@ -582,18 +583,6 @@ footer .foot-right a {
     }
     .masonry {
       columns: 3;
-    }
-    .container .grid {
-      flex-wrap: nowrap;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-    .container .grid .project {
-        height: 60vh;
-        min-width: 100%;
-        max-width: 100%;
-        margin: 1rem;
     }
     .container .grid .project img {
         opacity: 1;
