@@ -1,6 +1,6 @@
 const authDB = {
-  user: 'taylor',
-  password: 'PinBack3*0'
+  user: process.env.DB_USER,
+  password: process.env.PASS
 }
 
 module.exports = authDB;
